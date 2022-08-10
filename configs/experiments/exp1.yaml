@@ -1,0 +1,5 @@
+# @package _global_
+defaults:
+  - base.yaml
+  - _self_
+tags: ["exp1"]
