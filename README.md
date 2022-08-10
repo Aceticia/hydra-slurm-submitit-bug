@@ -1,1 +1,3 @@
-This repo tries to reproduce a submitter-related issue.
+This repo tries to reproduce a submitter-related issue. Install the requirements with `pip install -r requirements.txt`. The error is that submitit won't submit multiple experiments. Run `python app.py -m experiment=base` (or any other experiment) you will see it works as intended, luanching job on the simulated local slurm cluster. However, if you run `python app.py -m experiment=base,exp1` you see it instead tries to launch the 2 jobs locally.
+
+Note that this is only the minimal example, so it might not make realistic sense to have something arranged like this. The experiments folder of my real configs contain directories for different networks, each in turn containing a base network config and folders for individual experiments, which finally contain some override of the base network config. I reduced the clutter and made sure the same issue happens here.
